@@ -1,0 +1,124 @@
+footer {
+  background-color: $primary-black-color;
+}
+.footer__container {
+  padding-top: 12rem;
+  padding-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__content {
+  display: flex;
+  align-items: center;
+}
+.footer-logo {
+  margin-right: auto;
+}
+.footer_logo {
+}
+.footer__list {
+  display: flex;
+  gap: 4.2rem;
+}
+.footer__item {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    background-color: $primary-white-color;
+    transition: 0.3s;
+    height: 1px;
+    display: inline-block;
+  }
+  &:hover::before {
+    width: 100%;
+  }
+}
+.footer__link {
+  color: $primary-white-color;
+  font-family: $main-ff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 100% */
+  letter-spacing: 2px;
+}
+
+.footer__hr {
+  margin-top: 4.6rem;
+  margin-bottom: 3.1rem;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__bottom__list {
+}
+.footer__bottom__item {
+  display: flex;
+  flex-direction: column;
+}
+.footer__bottom__link {
+  opacity: 0.5;
+  color: $primary-white-color;
+  font-family: $main-ff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px; /* 162.5% */
+}
+.footer__social-imgs {
+  position: relative;
+  top: 50px;
+}
+.footer__social-img {
+}
+
+.footer__logo__hr {
+  display: none;
+}
+
+@media screen and (max-width: 652px) {
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 6rem;
+  }
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 25px;
+  }
+  .footer__list {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__hr {
+    display: none;
+  }
+  .footer__logo__hr {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+  }
+
+  .footer__bottom {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .footer__social-imgs {
+    position: relative;
+    top: 14px;
+  }
+}
